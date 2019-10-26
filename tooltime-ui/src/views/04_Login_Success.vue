@@ -29,7 +29,7 @@ export default Vue.extend({
         goOn() {
           setTimeout(() => {
             this.$router.push('main');
-          }, 3000) 
+          }, 2000) 
         },
         getText(key) {
           return this.$store.state.texts[this.lang][key];
