@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <Login />
+    <Header />
+    <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import Header from '@/components/Header.vue';
 import Login from '@/views/01_Login.vue';
 
 @Component({
   components: {
-    Login,
+    Header,
+    Login
   },
 })
 export default class App extends Vue {}

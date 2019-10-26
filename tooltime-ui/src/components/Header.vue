@@ -1,5 +1,5 @@
 <template>
-  <div class="header-container">
+  <div @click="goHome" class="header-container">
       HEADER
       <div class="icons">
           <img src="" class="icon-language" alt="language">
@@ -22,6 +22,27 @@ export default {
   computed: {
       showAllIcons() {
           return this.$store.state.appState !== ApplicationState.LOGGED_OUT;
+      }
+  },
+  methods: {
+      goHome() {
+          let path;
+          switch(this.$store.state.appState) {
+                case ApplicationState.LOGGED_OUT: 
+                    path = '/';
+                    break;
+                case ApplicationState.LOGGED_IN_NORMAL: 
+                    path = '/';
+                    break;
+                case ApplicationState.LOGGED_IN_SUPER: 
+                    path = '/';
+                    break;
+                default: 
+                    path = '/';
+                    break;
+          }
+
+          this.$router.push(path);
       }
   }
 
