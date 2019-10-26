@@ -1,7 +1,7 @@
 <template>
    <fullscreen ref="fullscreen" @change="fullscreenChange">
     <div id="app">
-      <button id="toggle-button" @click="fullScreen" :disabled="fullscreen"></button>
+      <button id="toggle-button" @click="fullScreen" :class="{'invisible' : fullscreen}"></button>
       <Header class="header-bar"/>
       <div class="main-container">
         <router-view/>
@@ -46,7 +46,7 @@ html {
   height: 100%;
   padding: 0%;
   margin: 0%;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 body {
@@ -100,5 +100,9 @@ body {
   width: 100px;
   height: 100px;
   border:none;
+}
+
+.invisible {
+  display: none;
 }
 </style>
