@@ -1,7 +1,7 @@
 <template>
   <div class="container-div">
       <div class="div-label"><label> {{ text }} </label></div>
-      <div class="div-img"><img v-if="showImg" v-bind:src="getPath" alt="img"></div>
+      <div v-if="showImg" class="div-img"><img v-if="showImg" v-bind:src="getPath" alt="img"></div>
       <slot></slot>
   </div>
 </template>
@@ -32,6 +32,10 @@ export default Vue.extend({
           if (this.imgPath.includes('png')) {
             let path = this.imgPath.replace('png','')
             return require(`@/assets/${path}.png`);
+          } else if (this.imgPath.includes('gif')) {
+            let path = this.imgPath.replace('gif','')
+            return require(`@/assets/${path}.gif`);
+
           } else {
             return require(`@/assets/${this.imgPath}.svg`);
           }

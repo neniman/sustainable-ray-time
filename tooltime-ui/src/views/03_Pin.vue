@@ -1,8 +1,8 @@
 <template>
-  <div class="pin">
+  <div class="pin first-pages">
       <Div 
         class="middle-container" 
-        :text="'yo'"
+        :text="$store.state.texts[$store.state.language].pinField"
       > 
         <PinField/> 
       </Div>

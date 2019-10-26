@@ -8,16 +8,19 @@ export default new Vuex.Store({
   state: {
     appState: ApplicationState.LOGGED_OUT as ApplicationState,
     language: Language.DE as Language,
-    pinButtons: ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'X', '0', 'OK'],
+    pinButtons: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '<', '0', 'OK'],
     pin: 1337,
     // pins: {
     //   id: pin
     // }
     texts: {
       de: {
+        reserve: 'Reservieren',
         login: 'Bitte ID oder Werkzeug scannen',
         success: 'Identifikation Erfolgreich',
         categoryPage: 'Kategorie wählen!',
+        categoryProduct: 'Produkt wählen',
+        pinField: 'PIN Eingeben',
         category: {
           safety: 'Schutzausrüstung',
           big: 'Großgeräte',

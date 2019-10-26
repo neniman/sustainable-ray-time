@@ -1,7 +1,9 @@
 <template>
-  <div @click="$emit('pressed-input', text)" class="button-container">
-      <label>{{ text }}</label>
-  </div>
+    <div class="button-container-outer">
+        <div @click="$emit('pressed-input', text)" class="button-container">
+            <label>{{ text }}</label>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -25,7 +27,14 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.button-container-outer {
+    padding: 15px;
+
+}
+
 .button-container {
+    height: 100%;
+    width: 100%;
     border-radius: 15px;
     background: #ffca10;
     border: 1px solid #979797;
@@ -34,5 +43,14 @@ export default Vue.extend({
 
 .button-container:focus {
     background: #d38100;
+}
+
+.button-container label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+    font-size: 30px;
 }
 </style>

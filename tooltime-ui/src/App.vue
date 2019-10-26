@@ -62,4 +62,15 @@ body {
 .main-container {
   height: 92% !important; 
 }
+
+.first-pages {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  height: 10%;
+  box-sizing: border-box;
+}
 </style>

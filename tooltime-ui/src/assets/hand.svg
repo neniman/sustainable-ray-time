@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="367px" height="38px" viewBox="0 0 367 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
-    <title>Group</title>
+    <title>icons8-swipe_right_gesture</title>
     <desc>Created with Sketch.</desc>
     <g id="Kategorie" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Tablet" transform="translate(-310.000000, -93.000000)">
+        <g id="Tablet" transform="translate(-310.000000, -96.000000)">
             <g id="Group" transform="translate(310.000000, 86.000000)">
-                <text id="Kategorie-wählen!" font-family="Rubik-Bold, Rubik" font-size="38" font-weight="bold" letter-spacing="-0.608" fill="#FFFFFF">
-                    <tspan x="36.535" y="36">Kategorie wählen!</tspan>
-                </text>
                 <image id="icons8-swipe_right_gesture" x="0" y="10" width="26" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAAAXNSR0IArs4c6QAABD1JREFUaAXtWj1oFEEUnrnsXnISsBARsRFFsLAQm5hOia0GxCKkEEX8w0IQ/CkTwUKwEAQtBLEJSAorURASlGgCsQhCLjEQwhGLFBpFjTnvdi/j90xGNpPbnbm7vTi3ZmGZv2/evG/e7Ju3s8sYLiHEJk8UbvqiOO2JYmE5LfSiPkPt6qXgffQRFdy+Tr46Xq1lTgr7zBuAoINlhI04zO3gnOdlmwYvYabpGvmmHSvBpXxWvIEO5QiSnHa0Xw8K1OCDUJP8GvkmnSrFcFo6grHdYR05Y9MOT++R7Tq8xJmmqnzTfpXgOD2D6JCO6FRwebpFthvgJdQ0LUG+YwquBpfCTH7UdJwNthvgg3CTfJMJqBZMSjDRFy2Ar2rX46Ol/YtW8q6ZFe/aXkaBYXjXI4p3jcKXEaGvwnLFAqnflSICtE1gt+wlJ4Chissp71EJkhpl8KX6qReP5LrOIKlIQYJO1bpbUqdAEtpTSSCh47BBUjdDjdK+YclGsZROzw1L6maoUdqtsGRRFC95wjuMEHNrPSbOiohHIfYV5RmESROc8SxnpQmfsWwLb5lRcMZFG0mGKU/kQZxll1YmwGFOFrH0XFgHWd9IJKXOavoJFeMgMgny48iPuswdA3kUl68kkJRcgukHvC9ddrn7kiqtcDxB7WLK78Wr4ws4tFMkL6mWlHP1q8SW9iedJFnxYeJJYivKJZ4k1q2fVMcjn0lKnf+BZGK3kKAlzUliz2nD/Rh3Didw9LnuB+5hBNZXEFi3rpJqWUHreEAgXWLePXips9A9DD+F/agTQfSUys/kSFLtE3c5TOk/44Cg4zP/KaKHowYDf+Ms1e1w53kQawPJSMcDC941JEi8Ngu29AxfrHswOZGTF5yE9ciHKoNn7RoI3q5GCSztJ3gTOIM3gUXbLfkWBIvVkMTMdeEj0nBe5HdW0z/uPqGWpIHgSS8CcL+GQeldry5HGpXoFEmSBOHz+QMsvwuVCLUNqyUJJ+Ji6dHL5yHblDfVR0uSBIHoFnjaUVh0l6lgm3CRW4hUFF5yHgcmx1H+KesaKTUiSYTSPP2eM3ESWRi0sS5jkkTL4c0U/dxqLIrhsWgoD4pmEOr1g+yJUJBlDUaOR9UZRFvhcUdQv09ts7Fc0XKVBOCIFnxWoqD9s6yzOa2KJBHK8EwOq70LWXyqsPuqmiTRwgn1AFztVbspsu9VPZMqKYR+j0D2tFpvSXmyJktKEk3MPY/8kCzblMKKr2OxJJGCx92OreUdcjtsIgm/0RGLJYkUPO4c/qAkj7toEclX8BuDsZEkYgj9xhD6nbOE5BccrtHhm/mRpKniCP36YFfyuH8/gpr2jRE3Dx3o9JD++oyfJAnFErmDk7tj8Lg5Kq/zNQgLtkGHN3Lc2ByPFBhM4YzSHvO68YNDJ57XAxhsG9qbg5gY8guQMQvZQ4LxfnoGVZm/AU26x4fehERiAAAAAElFTkSuQmCC"></image>
             </g>
         </g>

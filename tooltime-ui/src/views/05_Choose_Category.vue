@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <ImageHeader class="finger" :text="getText('categoryPage')" :imgPath="'hand'"/>
+    <ImageHeader class="header-container" :text="getText('categoryPage')" :imgPath="'hand'"/>
     <div class="categories">
       <Category 
         :class="'category-el'"
@@ -56,7 +56,7 @@ export default Vue.extend({
 <style scoped>
 .main {
     width: 100% !important;
-    height: 92% !important;
+    height: 100% !important;
 }
 
 .img-header {
@@ -65,15 +65,18 @@ export default Vue.extend({
 
 .categories {
   width: 100%;
-  height: 85%;
+  height: 90%;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 0 auto;
+  padding: 15px;
 }
 
-.category-el {
-  width: 25% !important;
-  height: 35% !important;
+.catergory-el {
+  box-sizing: border-box;
+  height: 100%;
 }
+
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div @click="goToFaceRecognition" class="login">
+  <div @click="goToFaceRecognition" class="login first-pages">
     <Div 
         class="middle-container" 
        :text="getText('login')"
-       :imgPath="'placeholderpng'"
+       :imgPath="'scangif'"
        />
   </div>
 </template>
@@ -41,9 +41,5 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.login {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
+
 </style>

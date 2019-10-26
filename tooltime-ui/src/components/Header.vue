@@ -7,11 +7,13 @@
                 src="@/assets/back.svg" 
                 class="icon-back icons" 
                 alt="folder">
-            <img 
-                @click="go('/')" 
-                src="@/assets/logo.svg" 
-                class="icon-logo icons" 
-                alt="logo">
+            <div class="logo"> 
+                <img 
+                    @click="go('/')" 
+                    src="@/assets/logo.svg" 
+                    class="icon-logo icons" 
+                    alt="logo">
+            </div>
             <img 
                 @click="go('/')" 
                 src="@/assets/logo.png" 
@@ -21,8 +23,13 @@
         <div class="icons-right">
             <img v-if="showAllIcons" src="@/assets/cart.svg" class="icon-cart icons" alt="cart">
             <img v-if="showAllIcons" src="@/assets/folder.svg" class="icon-folder icons" alt="folder">
-            <img src="@/assets/language.svg" class="icon-language" alt="language">
-            <img v-if="showAllIcons" src="@/assets/logout.svg" class="icon-logout" alt="logout">
+            <img :class="{'big' : !showAllIcons}" src="@/assets/language.svg" class="icon-language" alt="language">
+            <img 
+                @click="$router.push('/')"
+                v-if="showAllIcons" 
+                src="@/assets/logout.svg" 
+                class="icon-logout" 
+                alt="logout">
         </div>
   </div>
 </template>
@@ -82,7 +89,7 @@ export default {
     width: 10%;
 }
 
-.icons-left {
+.icons-left, .logo {
     float: left;
     height: 100%;
 }
@@ -97,18 +104,26 @@ export default {
     object-fit: contain;
 }
 
-.icons-right img, .icons-left img {
-    height: 100%;
-    object-fit: scale-down; 
-    width: 15%;
+.icons-right img {
     padding: 0 10px 0 10px;
 }
 
-.icon-logo {
-    height: 90% !important;
+.icons-right img, .icons-left img, .logo {
+    height: 100%;
+    object-fit: scale-down; 
+    width: 15%;
+}
+
+.logo .icon-logo{
+    width: 70%;
+    padding-left: 10px !important;
 }
 
 .icon-title {
+    width: 60% !important;
+}
 
+.big {
+    width: 60% !important;
 }
 </style>

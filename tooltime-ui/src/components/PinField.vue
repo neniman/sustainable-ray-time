@@ -4,7 +4,7 @@
             <input type="password" v-model="inputField" disabled>
         </div>
         <div class="buttons">
-            <PinButton v-for="(element, index) in buttons" 
+            <PinButton class="pin-button" v-for="(element, index) in buttons" 
             :key="index"
             :text="element"
             v-on:pressed-input="buttonPressed"
@@ -32,7 +32,7 @@ export default Vue.extend({
     },
     methods: {
         buttonPressed(input: string) {
-            if (input === 'X') {
+            if (input === '<') {
                 this.pressedButtons = [];
             } else if (input === 'OK') {
                 if (this.inputField == this.$store.state.pin) {
@@ -53,6 +53,10 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.field-container {
+    height: 90%;
+}
+
 .button-container {
     border-radius: 15px;
     background: #ffca10;
@@ -62,5 +66,35 @@ export default Vue.extend({
 
 .button-container:active {
     background: #d38100;
+}
+
+.input-field {
+    height: 20%;
+}
+
+.input-field input {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.buttons {
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+}
+
+.pin-button {
+    float: left;
+    display: block;
+    width: 33.33%;
+    height: 25%;
+    box-sizing: border-box;
+    position: relative;
 }
 </style>

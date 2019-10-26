@@ -36,13 +36,15 @@ export default Vue.extend({
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 10px 20px 10px;
+    padding: 30px 10px 20px 10px;
 }
 .img-header-container img {
-    height: 90%;
+    padding-top: 10px;
     padding-right: 10px;
+    height: 150%;
 }
 .img-header-container label {
+    padding-top: 10px;
     color: #ffffff;
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
