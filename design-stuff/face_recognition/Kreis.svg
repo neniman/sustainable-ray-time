@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="348px" height="349px" viewBox="0 0 348 349" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Kreis</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Face-Recog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Tablet" transform="translate(-339.000000, -216.000000)" stroke="#0CA641" stroke-width="12">
+            <g id="Kreis" transform="translate(345.000000, 222.000000)">
+                <path d="M0,156.5 C0.0670150575,116.092597 14.8654252,79.9074126 44.3952305,47.9444475 C73.9250358,15.9814825 111.293292,0 156.5,0" id="Path-2"></path>
+                <path d="M0,336.5 C0.0670150575,296.092597 14.8654252,259.907413 44.3952305,227.944448 C73.9250358,195.981483 111.293292,180 156.5,180" id="Path-2-Copy-2" transform="translate(78.250000, 258.250000) rotate(-90.000000) translate(-78.250000, -258.250000) "></path>
+                <path d="M179,156.5 C179.067015,116.092597 193.865425,79.9074126 223.395231,47.9444475 C252.925036,15.9814825 290.293292,0 335.5,0" id="Path-2-Copy" transform="translate(257.250000, 78.250000) rotate(90.000000) translate(-257.250000, -78.250000) "></path>
+                <path d="M179,336.5 C179.067015,296.092597 193.865425,259.907413 223.395231,227.944448 C252.925036,195.981483 290.293292,180 335.5,180" id="Path-2-Copy-3" opacity="0.899999976" transform="translate(257.250000, 258.250000) rotate(180.000000) translate(-257.250000, -258.250000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

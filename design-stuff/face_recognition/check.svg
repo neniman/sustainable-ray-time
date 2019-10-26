@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250px" height="206px" viewBox="0 0 250 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Face-Recog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Tablet" transform="translate(-394.000000, -299.000000)" stroke="#109A40" stroke-width="36">
+            <polyline id="check" transform="translate(513.072258, 390.473413) rotate(14.000000) translate(-513.072258, -390.473413) " points="422 440.676007 513.894516 488.946826 604.144516 292"></polyline>
+        </g>
+    </g>
+</svg>
