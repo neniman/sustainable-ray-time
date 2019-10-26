@@ -1,10 +1,10 @@
 <template>
-  <div @click="fullScreen" class="login first-pages" id="test">
+  <div @click="goToFaceRecognition" class="login first-pages" id="test">
     <Div 
         class="middle-container" 
        :text="getText('login')"
        :imgPath="'scangif'"
-       />
+    />
   </div>
 </template>
 

@@ -57,7 +57,7 @@ export default Vue.extend({
         goToPin() {
           this.img = this.$refs.webcam.capture();
             // console.log(WebCam.capture);
-            // this.$router.push('pin');
+            this.$router.push('pin');
         },
         onCapture() {
             this.img = this.$refs.webcam.capture();
