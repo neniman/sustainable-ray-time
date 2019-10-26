@@ -17,8 +17,8 @@ def box(width, height, depth, half=False, topbox=False):
     top = sp.cube([width-2*thickness, depth, thickness])
     top = spu.right(thickness)(top)
     if (half):
-        h = spu.up(height/2-thickness/2)(top)
-        obj += h
+        ha = spu.up(height/2-thickness/2)(top)
+        obj += ha
     h = sp.cylinder(holes/2, thickness+10)
     top -= sp.translate([50, 50, 0])(h)
     top -= sp.translate([width-50, 50, 0])(h)
@@ -33,12 +33,13 @@ def box(width, height, depth, half=False, topbox=False):
         sta = sp.rotate([0, -45, 0])(sta)
         cutout = sp.cube([width, depth, height])
         cutout = spu.down(height/4)(spu.left(width/4)(cutout))
-        cutout -= spu.back(5)(sp.cube([width/2, depth+10, height/2]))
+        cutout -= spu.back(5)(sp.cube([width/2-thickness, depth+10, height/2-thickness]))
         sta -= spu.back(depth/2)(cutout)
         sta = spu.right(thickness)(sta)
         sta += spu.right(width)(sp.mirror([1, 0, 0])(sta))
+        sta += sp.mirror([0, 0, 1])(sta)
         sta = spu.forward(depth-thickness)(sta)
-        obj += spu.up(height/2-thickness)(sta)
+        obj += (spu.up(height/2)(sta) - ha)
 
     if(half and topbox):
         window = sp.cube([width-2*thickness, thickness,
@@ -50,7 +51,7 @@ def box(width, height, depth, half=False, topbox=False):
 
 def main():
     obj = sp.part()
-    obj += box(600, 600, 200, True, True)
+    obj += box(600, 600, 200, True, False)
     return obj
 
 
