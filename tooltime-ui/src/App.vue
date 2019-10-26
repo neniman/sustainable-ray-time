@@ -6,24 +6,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
 import Header from '@/components/Header.vue';
-import Login from '@/views/01_Login.vue';
 
-@Component({
+export default Vue.extend({
+  name: 'App',
   components: {
-    Header,
-    Login
-  },
-})
-export default class App extends Vue {}
+    Header
+  }
+});
 </script>
 
 <style>
+    /* background:#2b2a2a; // dark grey
+    background:#3b3838; // Middle gray
+    background:#979797; // Light gray  */
 
-    /* background:#2b2a2a;  */
-    /* background:#3b3838;  */
-    /* background:#979797;  */
 html {
   height: 100%;
   padding: 0%;
@@ -50,5 +48,11 @@ body {
 .header-bar {
   height: 8%;
   width: 100%;
+}
+
+.middle-container {
+  width: 453px;
+  height: 486px;
+  margin: 0 auto;
 }
 </style>

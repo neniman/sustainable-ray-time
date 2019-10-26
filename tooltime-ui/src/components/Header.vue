@@ -1,9 +1,22 @@
 <template>
-  <div @click="goHome" class="header-container">
+  <div class="header-container">
         <div class="icons-left">
-            <img v-if="$route.name !== 'login'" src="@/assets/cart.svg" class="icon-back icons" alt="folder">
-            <img src="@/assets/logo.svg" class="icon-logo icons" alt="logo">
-            <img src="@/assets/tool-time.svg" class="icon-title icons" alt="Tool Time!">
+            <img 
+                v-if="$route.name !== 'login'" 
+                @click="go('back')"
+                src="@/assets/cart.svg" 
+                class="icon-back icons" 
+                alt="folder">
+            <img 
+                @click="go('/')" 
+                src="@/assets/logo.svg" 
+                class="icon-logo icons" 
+                alt="logo">
+            <img 
+                @click="go('/')" 
+                src="@/assets/tool-time.svg" 
+                class="icon-title icons" 
+                alt="Tool Time!">
         </div>
         <div class="icons-right">
             <img v-if="showAllIcons" src="@/assets/cart.svg" class="icon-cart icons" alt="cart">
@@ -30,6 +43,13 @@ export default {
       }
   },
   methods: {
+      go(path: string) {
+          if (path === 'back') {
+            this.$router.go(-1);
+          } else {
+            this.$router.push(path);
+          }
+      },
       goHome() {
           let path;
           switch(this.$store.state.appState) {

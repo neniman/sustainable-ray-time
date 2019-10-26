@@ -4,3 +4,11 @@ export enum ApplicationState {
     LOGGED_OUT = 'logout',
     RETURN_TOOL = 'return'
 }
+
+export enum Language {
+    DE = 'de',
+    EN = 'en',
+    SER = 'ser',
+    RUM = 'rum',
+    BOS = 'bos'
+}

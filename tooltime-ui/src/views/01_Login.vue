@@ -1,17 +1,27 @@
 <template>
   <div class="login">
-    <Scan />
+    <Div 
+        class="middle-container" 
+       :text="getText('login')"
+       :imgPath="'logo'"
+       />
     <button @click="goToFaceRecognition">Go To Face Recoginition</button>
   </div>
 </template>
 
 <script lang="ts">
-import Scan from '@/components/Scan.vue'
+import Vue from 'vue';
+import Div from '@/components/Div.vue'
 
-export default {
+export default Vue.extend({
     name: 'Login',
     components: {
-        Scan
+        Div,
+    },
+    data() {
+        return {
+            lang: this.$store.state.language
+        };
     },
     methods: {
         scan() {
@@ -19,7 +29,13 @@ export default {
         }, 
         goToFaceRecognition() {
             this.$router.push('face-recognition');
+        },
+        getText(key) {
+            return this.$store.state.texts[this.lang][key];
         }
     }
-}
+});
 </script>
+
+<style scoped>
+</style>

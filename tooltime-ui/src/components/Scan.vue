@@ -1,6 +1,6 @@
 <template>
   <div class="scan">
-      SCAN
+      <label></label>
   </div>
 </template>
 
@@ -8,6 +8,12 @@
 
 export default {
   name: 'scan',
+  props: {
+    text: {
+      type: String,
+      required: true
+    }
+  },
   data() {
       return {
 
