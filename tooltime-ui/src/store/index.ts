@@ -12,7 +12,7 @@ enum ApplicationState {
 
 export default new Vuex.Store({
   state: {
-    state: 'logout' as ApplicationState
+    appState: ApplicationState.LOGGED_OUT as ApplicationState
   },
   mutations: {
   },
