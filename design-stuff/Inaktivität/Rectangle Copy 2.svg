@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="461px" height="42px" viewBox="0 0 461 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Rectangle Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M287.281943,141 L737.718057,141 C738.163817,141 738.32546,141.046413 738.488423,141.133566 C738.651386,141.22072 738.77928,141.348614 738.866434,141.511577 C738.953587,141.67454 739,141.836183 739,142.281943 L739,173.718057 C739,174.163817 738.953587,174.32546 738.866434,174.488423 C738.77928,174.651386 738.651386,174.77928 738.488423,174.866434 C738.32546,174.953587 738.163817,175 737.718057,175 L287.281943,175 C286.836183,175 286.67454,174.953587 286.511577,174.866434 C286.348614,174.77928 286.22072,174.651386 286.133566,174.488423 C286.046413,174.32546 286,174.163817 286,173.718057 L286,142.281943 C286,141.836183 286.046413,141.67454 286.133566,141.511577 C286.22072,141.348614 286.348614,141.22072 286.511577,141.133566 C286.67454,141.046413 286.836183,141 287.281943,141 Z" id="path-1"></path>
+        <filter x="-1.5%" y="-14.7%" width="103.1%" height="141.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Inaktivität" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tablet" transform="translate(-282.000000, -139.000000)">
+            <g id="Rectangle-Copy-2">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFCA0C" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

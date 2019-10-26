@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="131px" viewBox="0 0 248 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Automatische Abmeldu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Inaktivität" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Rubik-Bold, Rubik" font-size="18" font-weight="bold" letter-spacing="-0.288">
+        <g id="Tablet" transform="translate(-388.000000, -333.000000)" fill="#FFFFFF">
+            <text id="Automatische-Abmeldu">
+                <tspan x="388.57" y="347">Automatische Abmeldung in </tspan>
+                <tspan x="512.5" y="369"></tspan>
+                <tspan x="484.843" y="391" font-size="42" letter-spacing="-0.672">30 </tspan>
+                <tspan x="548.305" y="391"></tspan>
+                <tspan x="512.5" y="441"></tspan>
+                <tspan x="468.49" y="463">Sekunden</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
