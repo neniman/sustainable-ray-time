@@ -1,5 +1,5 @@
 <template>
-  <div class="face-recognition">
+  <div class="face-recognition first-pages">
       <Div 
         class="middle-container" 
         :text="$store.state.texts[$store.state.language].pinField"

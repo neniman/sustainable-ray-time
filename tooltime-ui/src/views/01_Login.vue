@@ -1,5 +1,5 @@
 <template>
-  <div @click="goToFaceRecognition" class="login first-pages">
+  <div @click="fullScreen" class="login first-pages" id="test">
     <Div 
         class="middle-container" 
        :text="getText('login')"
@@ -27,9 +27,6 @@ export default Vue.extend({
         };
     },
     methods: {
-        scan() {
-            // TODO get id from store / get triggered from store
-        }, 
         goToFaceRecognition() {
             this.$router.push('face-recognition');
         },

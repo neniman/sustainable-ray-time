@@ -29,7 +29,7 @@ export default Vue.extend({
           img: null,
           camera: null,
           deviceId: null,
-          devices: []
+          devices: [],
       };
     },
     computed: {
@@ -91,4 +91,11 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.camera-container {
+    height: 90%;
+}
+.camera-container video{
+    width: 100%;
+    height: 100%;
+}
 </style>
