@@ -15,7 +15,8 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import PinButton from '@/components/PinButton.vue'
+import PinButton from '@/components/PinButton.vue';
+import { ApplicationState } from '@/util/enums';
 
 export default Vue.extend({
     name: 'PinField',
@@ -35,6 +36,7 @@ export default Vue.extend({
                 this.pressedButtons = [];
             } else if (input === 'OK') {
                 if (this.inputField == this.$store.state.pin) {
+                    this.$store.state.appState = ApplicationState.LOGGED_IN;
                     this.$router.push('success');
                 } else {
                     this.pressedButtons = [];

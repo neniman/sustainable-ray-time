@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <ImageHeader class="finger" :text="getText('categoryPage')" :imgPath="'kits'"/>
+    <ImageHeader class="finger" :text="getText('categoryPage')" :imgPath="'hand'"/>
     <div class="categories">
       <Category 
         :class="'category-el'"

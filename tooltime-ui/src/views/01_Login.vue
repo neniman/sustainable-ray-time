@@ -1,22 +1,25 @@
 <template>
-  <div class="login">
+  <div @click="goToFaceRecognition" class="login">
     <Div 
         class="middle-container" 
        :text="getText('login')"
-       :imgPath="'logo'"
+       :imgPath="'placeholderpng'"
        />
-    <button @click="goToFaceRecognition">Go To Face Recoginition</button>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import Div from '@/components/Div.vue'
+import Div from '@/components/Div.vue';
+import { ApplicationState } from '@/util/enums';
 
 export default Vue.extend({
     name: 'Login',
     components: {
         Div,
+    },
+    created() {
+        this.$store.state.appState = ApplicationState.LOGGED_OUT;
     },
     data() {
         return {
@@ -38,4 +41,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 </style>

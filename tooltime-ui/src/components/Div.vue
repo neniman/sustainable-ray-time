@@ -1,7 +1,7 @@
 <template>
   <div class="container-div">
-      <label> {{ text }} </label>
-      <img v-if="showImg" v-bind:src="getPath" alt="img">
+      <div class="div-label"><label> {{ text }} </label></div>
+      <div class="div-img"><img v-if="showImg" v-bind:src="getPath" alt="img"></div>
       <slot></slot>
   </div>
 </template>
@@ -29,7 +29,12 @@ export default Vue.extend({
   },
   computed: {
         getPath(): any {
-          return require(`@/assets/${this.imgPath}.svg`);
+          if (this.imgPath.includes('png')) {
+            let path = this.imgPath.replace('png','')
+            return require(`@/assets/${path}.png`);
+          } else {
+            return require(`@/assets/${this.imgPath}.svg`);
+          }
         }
   },
   methods: {
@@ -46,10 +51,24 @@ export default Vue.extend({
     padding: 25px;
 }
 
-.container-div label {
-    color: #ffffff;
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
+.container-div .div-label label {
+  color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  height: 100%;
+}
+
+.container-div .div-label {
+  height: 10%;
+}
+
+.container-div .div-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.container-div .div-img {
+  height: 90%;
 }
 </style>

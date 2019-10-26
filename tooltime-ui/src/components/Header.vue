@@ -4,7 +4,7 @@
             <img 
                 v-if="$route.name !== 'login'" 
                 @click="go('back')"
-                src="@/assets/cart.svg" 
+                src="@/assets/back.svg" 
                 class="icon-back icons" 
                 alt="folder">
             <img 
@@ -14,7 +14,7 @@
                 alt="logo">
             <img 
                 @click="go('/')" 
-                src="@/assets/tool-time.svg" 
+                src="@/assets/logo.png" 
                 class="icon-title icons" 
                 alt="Tool Time!">
         </div>
@@ -22,7 +22,7 @@
             <img v-if="showAllIcons" src="@/assets/cart.svg" class="icon-cart icons" alt="cart">
             <img v-if="showAllIcons" src="@/assets/folder.svg" class="icon-folder icons" alt="folder">
             <img src="@/assets/language.svg" class="icon-language" alt="language">
-            <img v-if="showAllIcons" src="@/assets/cart.svg" class="icon-logout" alt="logout">
+            <img v-if="showAllIcons" src="@/assets/logout.svg" class="icon-logout" alt="logout">
         </div>
   </div>
 </template>
@@ -89,7 +89,6 @@ export default {
 
 .icons-left img {
     float: left;
-    padding: 0 5px 0 5px;
 }
 
 .icons-right {
@@ -102,5 +101,14 @@ export default {
     height: 100%;
     object-fit: scale-down; 
     width: 15%;
+    padding: 0 10px 0 10px;
+}
+
+.icon-logo {
+    height: 90% !important;
+}
+
+.icon-title {
+
 }
 </style>
