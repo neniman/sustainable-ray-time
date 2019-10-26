@@ -1,12 +1,13 @@
 <template>
   <div class="field-container">
         <div class="input-field">
-            <input type="text">
+            <input type="password" v-model="inputField" disabled>
         </div>
         <div class="buttons">
             <PinButton v-for="(element, index) in buttons" 
             :key="index"
             :text="element"
+            v-on:pressed-input="buttonPressed"
             />
         </div>
   </div>
@@ -23,10 +24,28 @@ export default Vue.extend({
     },
     data() {
       return {
-          buttons: this.$store.state.pinButtons
+          buttons: this.$store.state.pinButtons,
+          pressedButtons: [] as string[],
+          inputField: ''
       }
     },
     methods: {
+        buttonPressed(input: string) {
+            if (input === 'X') {
+                this.pressedButtons = [];
+            } else if (input === 'OK') {
+                if (this.inputField == this.$store.state.pin) {
+                    this.$router.push('success');
+                } else {
+                    this.pressedButtons = [];
+                }
+            } else {
+                this.pressedButtons.push(input);
+            }
+            this.inputField = this.pressedButtons.join('');
+
+            console.log('input field: ', this.inputField);
+        }
     }
 });
 </script>
@@ -39,7 +58,7 @@ export default Vue.extend({
     color: #000000;
 }
 
-.button-container:focus {
+.button-container:active {
     background: #d38100;
 }
 </style>

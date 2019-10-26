@@ -84,9 +84,23 @@ export default {
 
 .icons-left {
     float: left;
+    height: 100%;
+}
+
+.icons-left img {
+    float: left;
+    padding: 0 5px 0 5px;
 }
 
 .icons-right {
     float: right;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icons-right img, .icons-left img {
+    height: 100%;
+    object-fit: scale-down; 
+    width: 15%;
 }
 </style>

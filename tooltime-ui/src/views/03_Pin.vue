@@ -1,9 +1,11 @@
 <template>
   <div class="pin">
-        <Div 
+      <Div 
         class="middle-container" 
-       :text="'yo'"
-       > <PinField/> </Div>
+        :text="'yo'"
+      > 
+        <PinField/> 
+      </Div>
     <button @click="goToSuccess">Go Login Success</button>
   </div>
 </template>

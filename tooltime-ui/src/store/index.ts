@@ -16,7 +16,16 @@ export default new Vuex.Store({
     texts: {
       de: {
         login: 'Bitte ID oder Werkzeug scannen',
-        success: 'Identifikation Erfolgreich'
+        success: 'Identifikation Erfolgreich',
+        categoryPage: 'Kategorie wählen!',
+        category: {
+          safety: 'Schutzausrüstung',
+          big: 'Großgeräte',
+          toolBig: 'Handwerkszeug',
+          small: 'Kleinteile',
+          toolSmall: 'Kleingeräte',
+          kits: 'Tool-Kits'
+        }  
       },
       en: {
         login: 'Please scan ID or tool',

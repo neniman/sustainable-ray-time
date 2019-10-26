@@ -5,7 +5,6 @@
        :text="getText('success')"
        :imgPath="'check'"
        />
-    <button @click="goToMain">Go To Main</button>
   </div>
 </template>
 
@@ -18,14 +17,19 @@ export default Vue.extend({
     components: {
       Div,
     },
+    mounted() {
+      this.goOn();
+    },
     data() {
       return {
         lang: this.$store.state.language
       }
     },
     methods: {
-        goToMain() {
+        goOn() {
+          setTimeout(() => {
             this.$router.push('main');
+          }, 2000) 
         },
         getText(key) {
           return this.$store.state.texts[this.lang][key];

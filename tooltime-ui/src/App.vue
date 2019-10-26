@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header class="header-bar"/>
-    <router-view />
+    <div class="main-container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -54,5 +56,9 @@ body {
   width: 453px;
   height: 486px;
   margin: 0 auto;
+}
+
+.main-container {
+  height: 92% !important; 
 }
 </style>

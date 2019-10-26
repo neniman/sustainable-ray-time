@@ -1,5 +1,5 @@
 <template>
-  <div @click="emit('')" class="button-container">
+  <div @click="$emit('pressed-input', text)" class="button-container">
       <label>{{ text }}</label>
   </div>
 </template>
