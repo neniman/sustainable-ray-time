@@ -67,9 +67,10 @@ def uid_get(uid_id):
     query = query_db('SELECT * FROM uid WHERE id = ?', (uid_id,), True)
     result = {}
     if query is None:
-        result['id'] = uid_id
         result['uid'] = ''
+        result['time'] = ''
     else:
+        update_db('DELETE FROM uid WHERE id = ?', (uid_id,))
         result['uid'] = query['uid']
         result['time'] = query['time'].isoformat()
     return Response(json.dumps(result), mimetype="application/json")
@@ -121,5 +122,5 @@ def return_result(result):
 
 if __name__ == "__main__":
     # enable if you also like to live dangerously
-    # APP.run(debug=False, host="0.0.0.0")
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0")
+    # app.run(debug=True)
