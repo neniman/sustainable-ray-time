@@ -41,9 +41,14 @@ const routes = [
     component: () => import('../views/07_Take_Product.vue')
   },
   {
-    path: '/logout',
-    name: 'logout',
+    path: '/return',
+    name: 'return',
     component: () => import('../views/08_Logout_Timer.vue')
+  },
+  {
+    path: '/back',
+    name: 'back',
+    component: () => import('../views/09_Back.vue')
   }
 ]
 

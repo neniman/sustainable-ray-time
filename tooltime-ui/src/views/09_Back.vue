@@ -1,17 +1,11 @@
 <template>
-  <div class="take first-pages">
+  <div class="first-pages">
       <div v-if="showIt" class="overlay"><img :src="getPath('inactivity')"></div>
-      <div class="lel">
       <Div 
         class="middle-container" 
-        :text="getText('take')"
+        :text="getText('return')"
         :imgPath="'take'"
       />
-      </div>
-    <div class="other-box"> 
-      <div class="el"><label style="color: #ffffff;">{{ getText('value')}}</label></div>
-      <div class="el"><label style="color: #ffca10;">{{ getText('valueNum')}}</label></div>
-    </div>
   </div>
 </template>
 
@@ -19,7 +13,7 @@
 import Vue from 'vue';
 import Div from '@/components/Div.vue';
 export default Vue.extend({
-    name: 'Take',
+    name: 'Back',
     components: {
       Div
     },
@@ -42,12 +36,12 @@ export default Vue.extend({
           setTimeout(() => {
             this.showIt = true;
             this.showLogout();
-          }, 5000) 
+          }, 1000) 
         },
         showLogout() {
             setTimeout(() => {
             this.$router.push('/');
-          }, 5000) 
+          }, 1000) 
         }
     }
 });
@@ -61,30 +55,10 @@ export default Vue.extend({
   right: 0;
 }
 
-.take {
-  flex-wrap: wrap;
-}
-
-.other-box {
-  width: 453px;
-  margin: 0 auto;
-  border-radius: 15px;
-  background: #3b3838;
-  border: 1px solid #979797;
-  padding: 25px;
-}
-
-.other-box .el {
-  height: 40%;
-  width: 100%;
-  color: #ffffff;
-  font-family: 'Rubik', sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.lel {
-  width: 100%;
-  height: 60% !important;
+.cunt {
+    border-radius: 15px;
+    background: #3b3838;
+    border: 1px solid #979797;
+    padding: 25px;
 }
 </style>

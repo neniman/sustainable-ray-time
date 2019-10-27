@@ -6,7 +6,7 @@
       > 
         <PinField/> 
       </Div>
-    <button @click="goToSuccess">Go Login Success</button>
+    <!-- <button @click="goToSuccess">Go Login Success</button> -->
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default Vue.extend({
     },
     methods: {
         goToSuccess() {
-                              this.$store.state.appState = ApplicationState.LOGGED_IN;
+            this.$store.state.appState = ApplicationState.LOGGED_IN;
 
             this.$router.push('success');
         }

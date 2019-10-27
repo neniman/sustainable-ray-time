@@ -25,7 +25,6 @@ export default Vue.extend({
     },
     data() {
         return {
-            data: 'Yo',
             lang: this.$store.state.language
         };
     },
@@ -33,12 +32,15 @@ export default Vue.extend({
         async checkNFC() {
             let id = '';
             let url = '192.168.4.1:5000/api/uid/1'
-            let url2 = 'https://appdividend.com/2018/08/20/javascript-fetch-api-example-tutorial/'
 
-            fetch(url2)
+            fetch(url)
             .then(response => response.json())
             .then(data => {
-                this.data=data;
+                if (data.uid === '123' ) {
+                    this.$router.push('pin');
+                } else if (data.uid === '456') {
+                    this.$router.push('return');
+                }
                 console.log(data);
             })
             .catch((error) => { console.log('hi'); console.error(error);});

@@ -15,6 +15,7 @@ export default new Vuex.Store({
     // }
     texts: {
       de: {
+        return: 'Produkt ablegen in!',
         value: 'Entliehener Warenwert',
         valueNum: '3.600€',
         take: 'Produkt entnehmen!',
