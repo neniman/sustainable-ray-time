@@ -37,8 +37,8 @@ export default Vue.extend({
     width: 100%;
     border-radius: 15px;
     background: #ffca10;
-    border: 1px solid #979797;
     color: #000000;
+    border: none;
 }
 
 .button-container:focus {
@@ -52,5 +52,6 @@ export default Vue.extend({
     transform: translate(-50%,-50%);
     font-weight: bold;
     font-size: 30px;
+    /* font-size: 50px; */
 }
 </style>

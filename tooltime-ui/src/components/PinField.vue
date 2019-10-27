@@ -45,8 +45,6 @@ export default Vue.extend({
                 this.pressedButtons.push(input);
             }
             this.inputField = this.pressedButtons.join('');
-
-            console.log('input field: ', this.inputField);
         }
     }
 });
@@ -64,12 +62,15 @@ export default Vue.extend({
     color: #000000;
 }
 
-.button-container:active {
+.button-container :active, .button-container:focus {
     background: #d38100;
 }
 
 .input-field {
     height: 20%;
+    /* height: 20%;
+    box-sizing: border-box;
+    padding: 15px; */
 }
 
 .input-field input {
@@ -81,6 +82,18 @@ export default Vue.extend({
     text-align: center;
     font-weight: bold;
     font-size: 30px;
+    border: none;
+    background: #ffffff;
+
+        /* width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    box-sizing: border-box;
+    border: none; */
 }
 
 .buttons {

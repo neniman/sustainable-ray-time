@@ -1,27 +1,31 @@
 <template>
-  <div @click="taken ? '' : $router.push('take-product')" :class="{ 'taken' : taken }" class="tool-detail">
+  <div :class="{ 'taken' : taken }" class="tool-detail">
         <img class="el icon-voice" v-bind:src="getPath('voice')" alt="voice">
-        <img class="el icon-tool" v-bind:src="getPath('img-main')" alt="img-main">
-        <label class="el label-main"> {{ getText('mainText') }} </label>
-        <label class="el label-small"> {{ getText('smallText') }} </label>
-        <img class="el icon-usage" v-bind:src="getPath('usage')" alt="usage">
-        <img class="el icon-poss" v-bind:src="getPath('possibilities')" alt="possibilities">
+        <img class="el icon-tool" v-bind:src="getPathKey('imgMain')" alt="img-main">
+        <div class="el">
+            <label class="label-main"> {{ getPath('mainText') }} </label>
+        </div> 
+        <div class="el">
+            <label class="el label-small"> {{ getPath('smallText') }} </label>
+        </div> 
+        <img class="el icon-usage" v-bind:src="getPathKey('usage')" alt="usage">
+        <img class="el icon-poss" v-bind:src="getPathKey('possibilities')" alt="possibilities">
         <div v-if="!taken" class="bottom-row">
-            <img class="icon-plus" :src="getPath('plus')" alt="plus">
+            <button class="icon-plus">+</button>
                 <label> {{ count }} </label>
-            <img class="icon-minus" :src="getPath('minus')" alt="minus">
+            <button class="icon-minus">-</button>
         </div>
         <div v-else class="bottom-button">
             <button>
                 {{ $store.state.texts[$store.state.language].reserve}}
             </button>
         </div>
-      <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import store from '../store';
 
 export default Vue.extend({
   name: 'scan',
@@ -34,16 +38,22 @@ export default Vue.extend({
   data() {
       return {
           count: 0,
-          taken: true
+          taken: false
       };
   },
   methods: {
+        getPathKey(key): any {
+            // let storeKey = this.getText(key);
+            // console.log(this.keyId + '-' + storeKey);
+            // return require(`@/assets/${this.keyId}-${storeKey}.svg`);
+            return require(`@/assets/safety.svg`);
+        },
         getPath(key): any {
-        //   return require(`@/assets/${this.imgPath}-${key}.svg`);
-          return require(`@/assets/safety.svg`);
+            return require(`@/assets/safety.svg`);
+            // return require(`@/assets/${key}.svg`);
         },
         getText(key): any {
-            return 'Bla';
+            return this.$store.state.texts[this.$store.state.language].tools[this.keyId][key]; 
         }
   }
 });
@@ -96,4 +106,6 @@ export default Vue.extend({
     border-radius: 7px;
     background: #ffca10;
 }
+
+
 </style>

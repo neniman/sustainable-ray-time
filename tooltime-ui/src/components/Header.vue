@@ -7,13 +7,13 @@
                 src="@/assets/back.svg" 
                 class="icon-back icons" 
                 alt="folder">
-            <div class="logo"> 
+            <!-- <div class="logo">  -->
                 <img 
                     @click="go('/')" 
                     src="@/assets/logo.svg" 
                     class="icon-logo icons" 
                     alt="logo">
-            </div>
+            <!-- </div> -->
             <img 
                 @click="go('/')" 
                 src="@/assets/logo.png" 
@@ -110,13 +110,13 @@ export default {
 
 .icons-right img, .icons-left img, .logo {
     height: 100%;
-    object-fit: scale-down; 
+    object-fit: scale-down;
     width: 15%;
 }
 
-.logo .icon-logo{
-    width: 70%;
-    padding-left: 10px !important;
+
+.icon-logo {
+    height: 200px;
 }
 
 .icon-title {

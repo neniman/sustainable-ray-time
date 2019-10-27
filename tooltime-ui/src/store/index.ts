@@ -16,7 +16,8 @@ export default new Vuex.Store({
     texts: {
       de: {
         reserve: 'Reservieren',
-        login: 'Bitte ID oder Werkzeug scannen',
+        rent: 'Ausleihen',
+        login: 'ID oder Werkzeug scannen',
         success: 'Identifikation Erfolgreich',
         categoryPage: 'Kategorie wählen!',
         categoryProduct: 'Produkt wählen',
@@ -28,6 +29,18 @@ export default new Vuex.Store({
           small: 'Kleinteile',
           toolSmall: 'Kleingeräte',
           kits: 'Tool-Kits'
+        },
+        tools: {
+          tool1: {
+            voice: 'voice',
+            imgMain: 'imgMain',
+            mainText: 'main Text',
+            smallText: 'small Text',
+            usage: 'usage',
+            possibilities: 'possibilities',
+            plus: 'plus',
+            minus: 'minus'
+          }
         }  
       },
       en: {

@@ -1,13 +1,13 @@
 <template>
-   <fullscreen ref="fullscreen" @change="fullscreenChange">
+   <!-- <fullscreen ref="fullscreen" @change="fullscreenChange"> -->
     <div id="app">
-      <button id="toggle-button" @click="fullScreen" :class="{'invisible' : fullscreen}"></button>
+      <!-- <button id="toggle-button" @click="fullScreen" :class="{'invisible' : fullscreen}"></button> -->
       <Header class="header-bar"/>
       <div class="main-container">
         <router-view/>
       </div>
     </div>
-  </fullscreen>
+  <!-- </fullscreen> -->
 </template>
 
 <script lang="ts">
@@ -19,7 +19,7 @@ export default Vue.extend({
   name: 'App',
   components: {
     Header,
-    Fullscreen
+    // Fullscreen
   },
   data() {
     return {
@@ -47,6 +47,7 @@ html {
   padding: 0%;
   margin: 0%;
   overflow: hidden !important;
+  box-sizing: border-box;
 }
 
 body {
@@ -74,11 +75,13 @@ body {
 .middle-container {
   width: 453px;
   height: 486px;
+  /* width: 40%;
+  height: 60%; */
   margin: 0 auto;
 }
 
 .main-container {
-  height: 92% !important; 
+  height: 90% !important; 
 }
 
 .first-pages {

@@ -41,7 +41,7 @@ export default Vue.extend({
 .img-header-container img {
     padding-top: 10px;
     padding-right: 10px;
-    height: 150%;
+    height: 50%;
 }
 .img-header-container label {
     padding-top: 10px;

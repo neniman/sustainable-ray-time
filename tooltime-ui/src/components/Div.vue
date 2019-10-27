@@ -53,6 +53,7 @@ export default Vue.extend({
     background: #3b3838;
     border: 1px solid #979797;
     padding: 25px;
+    /* padding: 50px; */
 }
 
 .container-div .div-label label {
@@ -60,11 +61,13 @@ export default Vue.extend({
   font-family: 'Rubik', sans-serif;
   font-weight: bold;
   font-size: 30px;
+  /* font-size: 60px; */
   height: 100%;
 }
 
 .container-div .div-label {
   height: 10%;
+  box-sizing: border-box;
 }
 
 .container-div .div-img img {
@@ -75,5 +78,6 @@ export default Vue.extend({
 
 .container-div .div-img {
   height: 90%;
+  background: #3b3838;
 }
 </style>
