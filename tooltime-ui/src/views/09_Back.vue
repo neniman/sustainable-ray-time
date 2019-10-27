@@ -36,12 +36,12 @@ export default Vue.extend({
           setTimeout(() => {
             this.showIt = true;
             this.showLogout();
-          }, 1000) 
+          }, 4000) 
         },
         showLogout() {
             setTimeout(() => {
             this.$router.push('/');
-          }, 1000) 
+          }, 4000) 
         }
     }
 });
