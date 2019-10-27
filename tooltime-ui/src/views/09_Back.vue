@@ -1,6 +1,6 @@
 <template>
   <div class="first-pages">
-      <div v-if="showIt" class="overlay"><img :src="getPath('inactivity')"></div>
+      <div v-if="showIt" class="overlay"><img style="margin: 100px;"  :src="getPath('inactivity')"></div>
       <Div 
         class="middle-container" 
         :text="getText('return')"
@@ -53,6 +53,7 @@ export default Vue.extend({
   margin: 0 auto;
   left: 0;
   right: 0;
+  background: #3b3838;
 }
 
 .cunt {

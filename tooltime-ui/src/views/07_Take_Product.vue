@@ -1,6 +1,6 @@
 <template>
   <div class="take first-pages">
-      <div v-if="showIt" class="overlay"><img :src="getPath('inactivity')"></div>
+      <div v-if="showIt" class="overlay"><img style="margin: 100px;" :src="getPath('inactivity')"></div>
       <div class="lel">
       <Div 
         class="middle-container" 
@@ -29,11 +29,35 @@ export default Vue.extend({
       };
     },
     mounted() {
+      this.openDoor();
       this.goOn();
     },
     methods: {
       getPath(key) {
           return require(`@/assets/${key}.svg`);
+      },
+      openDoor() {
+          let url = '/api/uid/2/1'
+
+        fetch(url)
+            .then(response => {
+                // console.log('res:', response);
+                // console.log('json', response.json());
+                return response.json();
+            })
+            .then((res) => {
+                // console.log('res:', res);
+                // if (res.uid === '0xabacaf1c' ) {
+                //     this.$router.push('success');
+                // } else if (res.uid === '0x410f49aa56581') {
+                //     this.$router.push('return');
+                // }
+                // console.log(res);
+            })
+            .catch((error) => { 
+                // console.log('error:', error); 
+                // console.error(error);
+                });
       },
         getText(key) {
             return this.$store.state.texts[this.$store.state.language][key];
@@ -59,6 +83,7 @@ export default Vue.extend({
   margin: 0 auto;
   left: 0;
   right: 0;
+  background: #3b3838;
 }
 
 .take {

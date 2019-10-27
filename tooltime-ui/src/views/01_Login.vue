@@ -45,7 +45,7 @@ export default Vue.extend({
             .then((res) => {
                 // console.log('res:', res);
                 if (res.uid === '0xabacaf1c' ) {
-                    this.$router.push('pin');
+                    this.$router.push('success');
                 } else if (res.uid === '0x410f49aa56581') {
                     this.$router.push('return');
                 }
