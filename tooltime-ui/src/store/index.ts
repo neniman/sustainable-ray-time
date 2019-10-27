@@ -34,8 +34,28 @@ export default new Vuex.Store({
           tool1: {
             voice: 'voice',
             imgMain: 'imgMain',
-            mainText: 'main Text',
-            smallText: 'small Text',
+            mainText: 'TE-2000-AVR',
+            smallText: 'Abbruchhammer',
+            usage: 'usage',
+            possibilities: 'possibilities',
+            plus: 'plus',
+            minus: 'minus'
+          },
+          tool2: {
+            voice: 'voice',
+            imgMain: 'imgMain',
+            mainText: 'SD-5000',
+            smallText: 'Magazin-Schrauben-Pistole',
+            usage: 'usage',
+            possibilities: 'possibilities',
+            plus: 'plus',
+            minus: 'minus'
+          },
+          tool3: {
+            voice: 'voice',
+            imgMain: 'imgMain',
+            mainText: 'AG-230-20D',
+            smallText: 'Winkelschleifer',
             usage: 'usage',
             possibilities: 'possibilities',
             plus: 'plus',

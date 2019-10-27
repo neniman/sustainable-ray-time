@@ -28,7 +28,7 @@ export default Vue.extend({
     },
     methods: {
         goToFaceRecognition() {
-            this.$router.push('face-recognition');
+            this.$router.push('pin');
         },
         getText(key) {
             return this.$store.state.texts[this.lang][key];

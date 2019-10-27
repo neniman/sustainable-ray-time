@@ -1,5 +1,10 @@
 <template>
   <div class="take">
+      <Div 
+        class="middle-container" 
+        :text="getText('login')"
+        :imgPath="'scangif'"
+      />
     <button @click="takeProduct">Go To Logout</button>
   </div>
 </template>
