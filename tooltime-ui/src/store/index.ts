@@ -15,6 +15,7 @@ export default new Vuex.Store({
     // }
     texts: {
       de: {
+        take: 'Produkt entnehmen!',
         reserve: 'Reservieren',
         rent: 'Ausleihen',
         login: 'ID oder Werkzeug scannen',
