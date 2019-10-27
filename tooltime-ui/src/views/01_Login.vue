@@ -5,7 +5,6 @@
        :text="getText('login')"
        :imgPath="'scangif'"
     />
-    {{ data }}
   </div>
 </template>
 
@@ -21,29 +20,41 @@ export default Vue.extend({
     },
     mounted() {
         this.$store.state.appState = ApplicationState.LOGGED_OUT;
-        this.checkNFC();
+        this.myInt = setInterval(this.checkNFC, 1000);
+    },
+    beforeDestroy() {
+        clearInterval(this.myInt)
     },
     data() {
         return {
-            lang: this.$store.state.language
+            lang: this.$store.state.language,
+            myInt: null
         };
     },
     methods: {
         async checkNFC() {
             let id = '';
-            let url = '192.168.4.1:5000/api/uid/1'
+            let url = '/api/uid/1'
 
             fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                if (data.uid === '123' ) {
+            .then(response => {
+                // console.log('res:', response);
+                // console.log('json', response.json());
+                return response.json();
+            })
+            .then((res) => {
+                // console.log('res:', res);
+                if (res.uid === '0xabacaf1c' ) {
                     this.$router.push('pin');
-                } else if (data.uid === '456') {
+                } else if (res.uid === '0x410f49aa56581') {
                     this.$router.push('return');
                 }
-                console.log(data);
+                // console.log(res);
             })
-            .catch((error) => { console.log('hi'); console.error(error);});
+            .catch((error) => { 
+                // console.log('error:', error); 
+                // console.error(error);
+                });
         },
         goToFaceRecognition() {
             this.$router.push('pin');

@@ -93,10 +93,14 @@ export default new Vuex.Store({
       fetch(url2)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        // console.log(data);
         return data;
       })
-      .catch((error) => { console.log('hi'); console.error(error);});
+      .catch((error) => { 
+        // console.log('hi'); 
+        // console.error(error);
+        return;
+      });
 
       // new Promise((rej,)) 
 
