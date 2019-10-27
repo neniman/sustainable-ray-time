@@ -1,6 +1,6 @@
 <template>
   <div class="first-pages">
-      <div v-if="showIt" class="overlay"><img style="margin: 100px;"  :src="getPath('inactivity')"></div>
+      <div v-if="showIt" class="overlay"><img style="margin: 120px;"  :src="getPath('inactivity')"></div>
       <Div 
         class="middle-container" 
         :text="getText('return')"

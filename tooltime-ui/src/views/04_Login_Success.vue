@@ -11,6 +11,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Div from '@/components/Div.vue'
+import { ApplicationState } from '@/util/enums';
 
 export default Vue.extend({
     name: 'Success',
@@ -18,6 +19,7 @@ export default Vue.extend({
       Div,
     },
     mounted() {
+      this.$store.state.appState = ApplicationState.LOGGED_IN;
       this.goOn();
     },
     data() {

@@ -1,6 +1,6 @@
 <template>
   <div class="take first-pages">
-      <div v-if="showIt" class="overlay"><img style="margin: 100px;" :src="getPath('inactivity')"></div>
+      <div v-if="showIt" class="overlay"><img style="margin: 120px;" :src="getPath('inactivity')"></div>
       <div class="lel">
       <Div 
         class="middle-container" 
@@ -37,7 +37,7 @@ export default Vue.extend({
           return require(`@/assets/${key}.svg`);
       },
       openDoor() {
-          let url = '/api/uid/2/1'
+          let url = '/api/uid/2/2'
 
         fetch(url)
             .then(response => {
