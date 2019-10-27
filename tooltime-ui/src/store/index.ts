@@ -15,6 +15,8 @@ export default new Vuex.Store({
     // }
     texts: {
       de: {
+        value: 'Entliehener Warenwert',
+        valueNum: '3.600€',
         take: 'Produkt entnehmen!',
         reserve: 'Reservieren',
         rent: 'Ausleihen',
@@ -82,6 +84,49 @@ export default new Vuex.Store({
   mutations: {
   },
   actions: {
+    async checkBackground({ commit }, payload: any) {
+      let id = '';
+      let url = '192.168.4.1:5000/api/uid/1'
+      let url2 = 'www.google.de'
+
+      fetch(url2)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        return data;
+      })
+      .catch((error) => { console.log('hi'); console.error(error);});
+
+      // new Promise((rej,)) 
+
+      // const fetchedTd = new Promise() fetch(url)
+      // .then(response => {
+      //   return response.json();
+      // })
+      // .then(myJson => {
+      //   td = JSON.stringify(myJson);
+      //   tdState = TdStateEnum.VALID_TD_FETCHED;
+      //   return {
+      //     td,
+      //     tdState,
+      //     errorMsg
+      //   };
+      // })
+      // .catch(err => {
+      //   errorMsg = err;
+      //   tdState = TdStateEnum.INVALID_TD_FETCHED;
+      //   td = null;
+      //   return {
+      //     td,
+      //     tdState,
+      //     errorMsg
+      //   };
+      // });
+      // setInterval(() => {
+
+      //   commit('setId', id);
+      // }, 1000);
+    }
   },
   modules: {
   }
