@@ -70,9 +70,8 @@ def uid_get(uid_id):
         result['id'] = uid_id
         result['uid'] = ''
     else:
-        query_db('DELETE FROM uid WHERE id = ? AND uid = ?',
-                 (uid_id, query['uid']), True)
         result['uid'] = query['uid']
+        result['time'] = query['time'].isoformat()
     return Response(json.dumps(result), mimetype="application/json")
 
 
