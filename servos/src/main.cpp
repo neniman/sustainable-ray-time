@@ -30,17 +30,17 @@ void loop()
 
 		Serial.println(incomingByte);
 		if (incomingByte == 49){
-			servoblau.write(180);
-			delay(1000);
 			servoblau.write(0);
+			delay(1000);
+			servoblau.write(180);
 		} else if (incomingByte == 50) {
-			servomiddle.write(180);
-			delay(1000);
 			servomiddle.write(0);
-		} else if (incomingByte == 51) {
-			servobottom.write(180);
 			delay(1000);
+			servomiddle.write(180);
+		} else if (incomingByte == 51) {
 			servobottom.write(0);
+			delay(1000);
+			servobottom.write(180);
 		}
 
 	}
